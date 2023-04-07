@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+man = Role.find_by(name: 'manager')
+emp = Role.find_by(name: 'employee')
+
+User.create(name: 'John Manager', email: 'da_boss@localhost.com', password: 'bds_man', role: man)
+User.create(name: 'Karl Peasant', email: 'karl@localhost.com', password: 'mypassword', role: emp)

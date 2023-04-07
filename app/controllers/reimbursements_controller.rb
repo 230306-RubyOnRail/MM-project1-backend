@@ -9,30 +9,32 @@ class ReimbursementsController < ApplicationController
   end
 
   def show
-    if @current_user.manager?
-      @reimbursement = reimbursement.all
+    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
+
+    if current_user&.manager?
+      @reimbursement = Reimbursement.all
       puts @reimbursement.inspect
       {status: [201, "Displayed reimbursement"]}
-      json body: {reimbursement: reimbursement}, headers: cors
+      render json: {reimbursement: Reimbursement}
     else
-      @reimbursement = current_user.reimbursement.all
-      puts reimbursement.inspect
+      @reimbursement =Reimbursement.find_by(user_id: current_user.id)
+      puts Reimbursement.inspect
       {status: [201, "Displayed reimbursement"]}
-      json body: {reimbursement: reimbursement}, headers: cors
+      render json: {reimbursement: Reimbursement}
     end
   end
   def destroy
-    if @current_user.manager?
-      if @reimbursements
-        reimbursement = Reimbursement.where(id: @reimbursements[:body]['id']).first
+    if current_user.manager?
+      if @reimbursement
+        reimbursement = Reimbursement.where(id: @reimbursement[:body]['id']).first
         reimbursement.delete if reimbursement
         {status: [201, "Deleted"]}
       else
         {status: [204, "No content"], body: {message: 'Deleted'}}
       end
     else
-      if @reimbursements
-        reimbursement = current_user.reimbursement.where(id: @reimbursements[:body]['id']).first
+      if @reimbursement
+        reimbursement = current_user.Reimbursement.where(id: @reimbursement[:body]['id']).first
         reimbursement.delete if reimbursement
         {status: [201, "Deleted"]}
       else
@@ -48,7 +50,7 @@ class ReimbursementsController < ApplicationController
     puts "Updating request #{@old_reimbursement.id}"
     @old_reimbursement.delete
     @new_reimbursement = Reimbursement.new(@reimbursements[:body])
-    {body: {amount: new_reimbursement.amount}}
+    {body: {amount: @new_reimbursement.amount}}
     if @new_reimbursement.save
       {status: [201, "Updated"]}
     else
@@ -56,21 +58,14 @@ class ReimbursementsController < ApplicationController
     end
   end
 
-  def new
-    @reimbursement = Reimbursement.new(@request[:body])
+  def create # POST /users/:user_id/lists
+    data = JSON.parse(request.body.read)
+    data[:user_id] = current_user.id
+    @reimbursement = Reimbursement.new(data)
     if @reimbursement.save
-      {status: [201, "Created"], body: {message: 'Request created successfully'}}
+      render json: { reimbursement: @reimbursement }, status: :created
     else
-      {status: [422, "Unprocessable Entity"], body: {message: 'Invalid username or password'}}
-    end
-  end
-
-  def create
-    @reimbursement = current_user.reimbursement.new(reimbursement_params)
-    if @reimbursement.save
-      {status: [201, "Created"], body: {message: 'Request created successfully'}}
-    else
-      {status: [422, "Unprocessable Entity"], body: {message: 'Invalid username or password'}}
+      render json: @reimbursement.errors, status: :unprocessable_entity
     end
   end
 
