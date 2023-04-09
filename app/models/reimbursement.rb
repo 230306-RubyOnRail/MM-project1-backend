@@ -1,3 +1,3 @@
- class Reimbursement < ApplicationRecord
-
+class Reimbursement < ApplicationRecord
+  belongs_to :user
 end
