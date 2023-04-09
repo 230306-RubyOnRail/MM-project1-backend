@@ -560,3 +560,463 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 362ms (Views: 0.4ms | ActiveRecord: 12.6ms | Allocations: 11641)
 
 
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:40:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 303ms (ActiveRecord: 12.3ms | Allocations: 10861)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:41:29 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 254ms (ActiveRecord: 1.3ms | Allocations: 736)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:42:43 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"karl@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"karl@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "karl@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 283ms (ActiveRecord: 1.6ms | Allocations: 736)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:43:33 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"karl@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"karl@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "karl@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 273ms (ActiveRecord: 7.7ms | Allocations: 3840)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:44:38 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 259ms (ActiveRecord: 1.7ms | Allocations: 721)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:45:05 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 255ms (ActiveRecord: 1.4ms | Allocations: 721)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:45:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 308ms (ActiveRecord: 10.9ms | Allocations: 10810)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-09 17:46:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started PUT "/auth/login" for 127.0.0.1 at 2023-04-09 17:46:15 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/auth/login"):
+  
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:46:17 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 262ms (ActiveRecord: 1.3ms | Allocations: 735)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:47:49 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 293ms (ActiveRecord: 3.9ms | Allocations: 731)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:48:19 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 401 Unauthorized in 259ms (ActiveRecord: 1.2ms | Allocations: 720)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:49:34 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 264ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1134)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:50:35 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"username"=>"jon", "pass"=>"jonny", "role"=>"manager", "reimbursement"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 417)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:50:43 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 99)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:51:37 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 99)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:53:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 308ms (Views: 0.3ms | ActiveRecord: 13.0ms | Allocations: 11249)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:53:35 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 422)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:54:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 306ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 11245)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:55:00 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 3ms (Views: 1.0ms | ActiveRecord: 1.8ms | Allocations: 422)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:55:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 301ms (Views: 0.3ms | ActiveRecord: 10.5ms | Allocations: 11246)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:56:06 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 1.8ms | Allocations: 157)
+
+
+  
+NoMethodError (undefined method `role_id' for nil:NilClass):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:56:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 300ms (Views: 3.0ms | ActiveRecord: 11.9ms | Allocations: 11241)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 17:56:28 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 425)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 17:59:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 308ms (Views: 0.4ms | ActiveRecord: 12.3ms | Allocations: 11241)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:00:04 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 427)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:01:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 307ms (Views: 0.3ms | ActiveRecord: 11.7ms | Allocations: 11247)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:01:49 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 427)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:05:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 302ms (Views: 1.9ms | ActiveRecord: 11.9ms | Allocations: 11243)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:05:55 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 1.8ms | Allocations: 157)
+
+
+  
+JSON::ParserError (unexpected token at ''):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:06:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 4.8ms | Allocations: 2202)
+
+
+  
+TypeError (no implicit conversion of ActionDispatch::Request into String):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:07:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 5.9ms | Allocations: 2202)
+
+
+  
+TypeError (no implicit conversion of ActionDispatch::Request into String):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:07:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 306ms (Views: 1.7ms | ActiveRecord: 12.3ms | Allocations: 11241)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:07:39 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 2.0ms | Allocations: 160)
+
+
+  
+TypeError (no implicit conversion of ActionDispatch::Request into String):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:08:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 4.9ms | Allocations: 2247)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:08:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 6.4ms | Allocations: 2251)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Http::Headers:0x0000000112a17558 @req=#<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>>):
+  
+app/controllers/reimbursements_controller.rb:5:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:09:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 5.4ms | Allocations: 2259)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Http::Headers:0x0000000108d57d30 @req=#<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>>):
+  
+app/controllers/reimbursements_controller.rb:6:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:12:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.5ms | Allocations: 2256)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Http::Headers:0x0000000107097fb0 @req=#<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>>):
+  
+app/controllers/reimbursements_controller.rb:6:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:12:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 15.8ms | Allocations: 2256)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Http::Headers:0x000000010d08e310 @req=#<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>>):
+  
+app/controllers/reimbursements_controller.rb:6:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:13:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 7.3ms | Allocations: 2257)
+
+
+  
+NoMethodError (undefined method `read' for #<ActionDispatch::Http::Headers:0x000000010d0a8030 @req=#<ActionDispatch::Request GET "http://localhost:3000/reimbursements" for 127.0.0.1>>):
+  
+app/controllers/reimbursements_controller.rb:6:in `index'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:16:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 5.3ms | Allocations: 376)
+
+
+  
+NameError (uninitialized constant JsonWebToken::ExceptionHandler):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:17:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 6.4ms | Allocations: 376)
+
+
+  
+NameError (uninitialized constant JsonWebToken::ExceptionHandler):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:17:48 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 292ms (Views: 0.4ms | ActiveRecord: 8.7ms | Allocations: 9426)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:17:57 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 128)
+
+
+  
+NameError (uninitialized constant JsonWebToken::ExceptionHandler):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:28:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 12.6ms | Allocations: 436)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:28:35 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 392ms (Views: 0.3ms | ActiveRecord: 28.7ms | Allocations: 9428)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:29:39 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+JWT::DecodeError (Invalid segment encoding):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:32:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 5.5ms | Allocations: 448)
+
+
+  
+JWT::DecodeError (Invalid segment encoding):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:33:01 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+JWT::DecodeError (Invalid segment encoding):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:34:21 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 297ms (Views: 0.3ms | ActiveRecord: 11.3ms | Allocations: 9430)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:34:40 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'

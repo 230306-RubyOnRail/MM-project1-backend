@@ -1,19 +1,9 @@
 class ReimbursementsController < ApplicationController
-
+  include Authenticatable
   #this works at the moment
   def index
-    @reimbursements = Reimbursement.all
-    if @reimbursements
-
-      render status: :ok, json: {Reimbursement: @reimbursements}
-    else
-      {status: [401, "Unauthorized"], body: {message: 'Unauthorized'}}
-    end
-  end
-
-  def show
+    puts "user role is: #{current_user}"
     return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
-
     if current_user&.manager?
       @reimbursement = Reimbursement.all
       puts @reimbursement.inspect

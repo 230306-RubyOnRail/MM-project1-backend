@@ -12,6 +12,7 @@ module Authenticatable
   private
 
   def authenticate_request!
+    puts token
     token_data = JsonWebToken.decode(token)
     puts token_data.inspect
     @current_user = User.find(JsonWebToken.decode(token)['user_id'])

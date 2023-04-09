@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  def index
-    User.all
-  end
   def create
     if @user.manager?
       #@user = User.new(@request[:body])
