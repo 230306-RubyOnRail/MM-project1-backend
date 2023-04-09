@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   #all the necessary routes
+  post '/auth/login', to: 'sessions#create'
   resources :users
   resources :reimbursements
 end

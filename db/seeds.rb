@@ -8,5 +8,7 @@
 man = Role.find_by(name: 'manager')
 emp = Role.find_by(name: 'employee')
 
-User.create(name: 'John Manager', email: 'da_boss@localhost.com', password: 'bds_man', role: man)
-User.create(name: 'Karl Peasant', email: 'karl@localhost.com', password: 'mypassword', role: emp)
+#User.create(name: 'John Manager', email: 'da_boss@localhost.com', password: 'bds_man', role: man)
+#User.create(name: 'Karl Peasant', email: 'karl@localhost.com', password: 'mypassword', role: emp)
+
+Reimbursement.create(description: 'Giant duck', status: 'pending', amount: 500, user_id: 1)

@@ -1,8 +1,11 @@
 class ReimbursementsController < ApplicationController
+
+  #this works at the moment
   def index
     @reimbursements = Reimbursement.all
-    if @reimbursement
-      {status: [201, "Success"]}
+    if @reimbursements
+
+      render status: :ok, json: {Reimbursement: @reimbursements}
     else
       {status: [401, "Unauthorized"], body: {message: 'Unauthorized'}}
     end

@@ -4,14 +4,16 @@ class UsersController < ApplicationController
   end
   def create
     if @user.manager?
-      @user = User.new(@request[:body])
-      if @user.save
-        {status: [201, "Created"], body: {message: 'User created successfully'}}
+      #@user = User.new(@request[:body])
+      user = User.new(JSON.parse(request.body.read))
+      if user.save
+        render json: {user: user}, status: :created
+        #{status: [201, "Created"], body: {message: 'User created successfully'}}
       else
-        {status: [422, "Unprocessable Entity"], body: {message: 'Invalid username or password'}}
+        render json: {error:"User Make Failed" }, status: :unprocessable_entity
       end
     else
-      {status: [401, "Unauthorized"], body: {message: 'Unauthorized'}}
+      render json: {error: "No authorized principal"}, status: :unauthorized
     end
   end
 end
