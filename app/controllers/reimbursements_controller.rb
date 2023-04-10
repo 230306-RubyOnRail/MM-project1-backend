@@ -2,33 +2,32 @@ class ReimbursementsController < ApplicationController
   include Authenticatable
   #this works at the moment
   def index
-    puts "user role is: #{current_user}"
     return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
     if current_user&.manager?
       @reimbursement = Reimbursement.all
       puts @reimbursement.inspect
       {status: [201, "Displayed reimbursement"]}
-      render json: {reimbursement: Reimbursement}
+      render json: {reimbursement: @reimbursement}
     else
       @reimbursement =Reimbursement.find_by(user_id: current_user.id)
-      puts Reimbursement.inspect
+      puts @reimbursement.inspect
       {status: [201, "Displayed reimbursement"]}
-      render json: {reimbursement: Reimbursement}
+      render json: {reimbursement: @reimbursement}
     end
   end
   def destroy
-    if current_user.manager?
+    if current_user&.manager?
+      @reimbursement = Reimbursement.where(id: params[:id]).first
       if @reimbursement
-        reimbursement = Reimbursement.where(id: @reimbursement[:body]['id']).first
-        reimbursement.delete if reimbursement
+        @reimbursement.delete if @reimbursement
         {status: [201, "Deleted"]}
       else
         {status: [204, "No content"], body: {message: 'Deleted'}}
       end
     else
+      @reimbursement = current_user&.Reimbursement.where(id: params[:id]).first
       if @reimbursement
-        reimbursement = current_user.Reimbursement.where(id: @reimbursement[:body]['id']).first
-        reimbursement.delete if reimbursement
+        @reimbursement.delete if @reimbursement
         {status: [201, "Deleted"]}
       else
         {status: [204, "No content"], body: {message: 'Deleted'}}
@@ -39,12 +38,11 @@ class ReimbursementsController < ApplicationController
 
 
   def update
-    @old_reimbursement = Reimbursement.where(id: @reimbursements[:body]['id']).first
-    puts "Updating request #{@old_reimbursement.id}"
-    @old_reimbursement.delete
-    @new_reimbursement = Reimbursement.new(@reimbursements[:body])
-    {body: {amount: @new_reimbursement.amount}}
-    if @new_reimbursement.save
+    @reimbursement = Reimbursement.where(id: params[:id]).first
+    puts "Updating request #{@reimbursement}"
+    @reimbursement.update(JSON.parse(request.body.read))
+    {body: {amount: @reimbursement.amount}}
+    if @reimbursement.save
       {status: [201, "Updated"]}
     else
       {status: [401, "Unauthorized"], body: {message: 'Invalid username or password'}}

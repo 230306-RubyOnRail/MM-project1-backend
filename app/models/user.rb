@@ -2,7 +2,7 @@ class User < ApplicationRecord
   belongs_to :role
   has_secure_password
   def manager?
-    @user.role_id == 'manager'
+    self.role_id == 1
   end
 
   def self.digest(password)

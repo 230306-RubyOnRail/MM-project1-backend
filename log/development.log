@@ -1020,3 +1020,1263 @@ JWT::DecodeError (No verification key available):
 lib/json_web_token.rb:14:in `rescue in decode'
 lib/json_web_token.rb:9:in `decode'
 app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:50:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 307ms (Views: 1.9ms | ActiveRecord: 12.8ms | Allocations: 11241)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:50:38 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 3.4ms | Allocations: 333)
+
+
+  
+JWT::DecodeError (No verification key available):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:52:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 333ms (Views: 0.3ms | ActiveRecord: 15.8ms | Allocations: 11236)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:53:04 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 8ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 1160)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:54:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 26ms (Views: 0.3ms | ActiveRecord: 17.9ms | Allocations: 7482)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 18:55:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 347ms (Views: 1.8ms | ActiveRecord: 13.6ms | Allocations: 11233)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:55:09 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 31ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 1160)
+
+
+Started GET "/reimbursements" for 127.0.0.1 at 2023-04-09 18:57:52 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "reimbursement"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 15ms (Views: 0.2ms | ActiveRecord: 12.6ms | Allocations: 3650)
+
+
+Started GET "/reimbursements/1" for 127.0.0.1 at 2023-04-09 18:58:15 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReimbursementsController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 18:58:21 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 769)
+
+
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 18:59:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 24ms (Views: 0.3ms | ActiveRecord: 13.6ms | Allocations: 7498)
+
+
+Started GET "/reimbursements/1" for 127.0.0.1 at 2023-04-09 18:59:25 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReimbursementsController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 18:59:41 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 784)
+
+
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:00:31 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 8ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 782)
+
+
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:01:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 22ms (Views: 0.7ms | ActiveRecord: 12.2ms | Allocations: 7492)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:01:24 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.3ms | Allocations: 2866)
+
+
+  
+NoMethodError (undefined method `role_id' for nil:NilClass):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:02:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 12.8ms | Allocations: 9382)
+
+
+  
+NoMethodError (undefined method `role_id' for nil:NilClass):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:02:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 12.6ms | Allocations: 9382)
+
+
+  
+NoMethodError (undefined method `role_id' for nil:NilClass):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:03:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 17.0ms | Allocations: 9434)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:05:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 18.5ms | Allocations: 9427)
+
+
+  
+NoMethodError (undefined method `role_id' for nil:NilClass):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:06:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 13.6ms | Allocations: 9677)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<User id: 1, name: "John Manager", email: "da_boss@localhost.com", password_digest: [FILTERED], role_id: 1, created_at: "2023-04-07 20:46:46.315901000 +0000", updated_at: "2023-04-07 20:46:46.315901000 +0000">):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:06:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (3.4ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 65ms (Views: 1.8ms | ActiveRecord: 16.4ms | Allocations: 10296)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:07:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 15.5ms | Allocations: 9631)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<User id: 1, name: "John Manager", email: "da_boss@localhost.com", password_digest: [FILTERED], role_id: 1, created_at: "2023-04-07 20:46:46.315901000 +0000", updated_at: "2023-04-07 20:46:46.315901000 +0000">):
+  
+app/models/user.rb:5:in `manager?'
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:08:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (2.9ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 62ms (Views: 2.5ms | ActiveRecord: 15.3ms | Allocations: 10340)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "manager"], ["LIMIT", 1]]
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "employee"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReimbursement Create (30.1ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant duck"], ["status", "pending"], ["amount", 500.0], ["user_id", 1], ["created_at", "2023-04-10 00:09:22.204466"], ["updated_at", "2023-04-10 00:09:22.204466"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:09:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (2.8ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 88ms (Views: 0.3ms | ActiveRecord: 19.7ms | Allocations: 13375)
+
+
+Started GET "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:10:18 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"reimbursement"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 801)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:10:21 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.4ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 1284)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:10:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.4ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 96ms (Views: 2.1ms | ActiveRecord: 19.1ms | Allocations: 13375)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:11:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.4ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:13:in `index'
+Completed 200 OK in 86ms (Views: 0.7ms | ActiveRecord: 17.5ms | Allocations: 13608)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:12:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (2.9ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:14:in `index'
+Completed 200 OK in 104ms (Views: 0.4ms | ActiveRecord: 29.5ms | Allocations: 13661)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:12:21 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 268ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1180)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:12:28 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (0.9ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:14:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 1387)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:12:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 16.1ms | Allocations: 9667)
+
+
+  
+NoMethodError (undefined method `manager?' for #<User id: 1, name: "John Manager", email: "da_boss@localhost.com", password_digest: [FILTERED], role_id: 1, created_at: "2023-04-07 20:46:46.315901000 +0000", updated_at: "2023-04-07 20:46:46.315901000 +0000">):
+  
+app/controllers/reimbursements_controller.rb:7:in `index'
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:13:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.8ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/reimbursements_controller.rb:9:in `index'
+  [1m[36mReimbursement Load (1.5ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements"[0m
+  ↳ app/controllers/reimbursements_controller.rb:11:in `index'
+Completed 200 OK in 90ms (Views: 1.4ms | ActiveRecord: 22.7ms | Allocations: 14415)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:13:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.3ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/reimbursements_controller.rb:10:in `index'
+  [1m[36mReimbursement Load (1.8ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements"[0m
+  ↳ app/controllers/reimbursements_controller.rb:12:in `index'
+Completed 200 OK in 90ms (Views: 3.7ms | ActiveRecord: 19.3ms | Allocations: 14351)
+
+
+Started POST "/reimbursements/create/?user_id=1" for 127.0.0.1 at 2023-04-09 19:21:56 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/reimbursements/create"):
+  
+Started POST "/reimbursements/create/" for 127.0.0.1 at 2023-04-09 19:22:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/reimbursements/create"):
+  
+Started POST "/reimbursements/users/:user_id/lists" for 127.0.0.1 at 2023-04-09 19:22:41 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/reimbursements/users/:user_id/lists"):
+  
+Started POST "/users/:user_id/lists" for 127.0.0.1 at 2023-04-09 19:22:47 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/:user_id/lists"):
+  
+Started POST "/reimbursements/create/?user_id=1" for 127.0.0.1 at 2023-04-09 19:22:56 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/reimbursements/create"):
+  
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:23:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1, "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 5.5ms | Allocations: 285)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:24:00 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 293ms (Views: 0.3ms | ActiveRecord: 9.3ms | Allocations: 9507)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:24:09 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1, "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:57:in `create'
+  [1m[36mReimbursement Create (1.6ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant duck"], ["status", "pending"], ["amount", 500.0], ["user_id", 1], ["created_at", "2023-04-10 00:24:09.977001"], ["updated_at", "2023-04-10 00:24:09.977001"]]
+  ↳ app/controllers/reimbursements_controller.rb:57:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:57:in `create'
+Completed 201 Created in 28ms (Views: 0.5ms | ActiveRecord: 8.0ms | Allocations: 8819)
+
+
+Started PATCH "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:26:56 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/reimbursements"):
+  
+Started PATCH "/reimbursements/:id" for 127.0.0.1 at 2023-04-09 19:27:00 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>":id", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>":id", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 161)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started PATCH "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:27:15 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/reimbursements"):
+  
+Started PATCH "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:27:23 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.4ms | Allocations: 766)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/reimbursements_controller.rb:41:in `update'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:30:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 304ms (Views: 2.4ms | ActiveRecord: 11.1ms | Allocations: 11235)
+
+
+Started PATCH "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:30:09 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 3.1ms | Allocations: 1156)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/reimbursements_controller.rb:41:in `update'
+Started PATCH "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:30:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 14.8ms | Allocations: 9929)
+
+
+  
+NoMethodError (undefined method `update=' for nil:NilClass):
+  
+app/controllers/reimbursements_controller.rb:42:in `update'
+Started PATCH "/reimbursements/1/?id=2" for 127.0.0.1 at 2023-04-09 19:33:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.6ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mReimbursement Update (6.6ms)[0m  [1m[33mUPDATE "reimbursements" SET "id" = $1, "amount" = $2, "updated_at" = $3 WHERE "reimbursements"."id" = $4[0m  [["id", 2], ["amount", 600.0], ["updated_at", "2023-04-10 00:33:31.509513"], ["id", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 27.9ms | Allocations: 18720)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "reimbursements_pkey"
+DETAIL:  Key (id)=(2) already exists.
+):
+  
+app/controllers/reimbursements_controller.rb:43:in `update'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:33:36 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 270ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1225)
+
+
+Started PATCH "/reimbursements/1/?id=2" for 127.0.0.1 at 2023-04-09 19:33:43 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "reimbursement"=>{"id"=>"1", "description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.1ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mReimbursement Update (1.4ms)[0m  [1m[33mUPDATE "reimbursements" SET "id" = $1, "amount" = $2, "updated_at" = $3 WHERE "reimbursements"."id" = $4[0m  [["id", 2], ["amount", 600.0], ["updated_at", "2023-04-10 00:33:43.369067"], ["id", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 5.7ms | Allocations: 4094)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "reimbursements_pkey"
+DETAIL:  Key (id)=(2) already exists.
+):
+  
+app/controllers/reimbursements_controller.rb:43:in `update'
+Started PATCH "/reimbursements/1/?id=2" for 127.0.0.1 at 2023-04-09 19:34:04 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "id"=>"1", "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.7ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mReimbursement Update (2.2ms)[0m  [1m[33mUPDATE "reimbursements" SET "amount" = $1, "updated_at" = $2 WHERE "reimbursements"."id" = $3[0m  [["amount", 600.0], ["updated_at", "2023-04-10 00:34:04.631326"], ["id", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 8.0ms | Allocations: 4052)
+
+
+  
+NoMethodError (undefined method `amount' for nil:NilClass):
+  
+app/controllers/reimbursements_controller.rb:44:in `update'
+Started PATCH "/reimbursements/1/?id=2" for 127.0.0.1 at 2023-04-09 19:34:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#update as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "id"=>"1", "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.2ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 204 No Content in 91ms (ActiveRecord: 17.4ms | Allocations: 16734)
+
+
+Started PATCH "/reimbursements/2/?id=2" for 127.0.0.1 at 2023-04-09 19:35:12 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1, "id"=>"2", "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>600, "user_id"=>1}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.0ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mReimbursement Update (1.8ms)[0m  [1m[33mUPDATE "reimbursements" SET "amount" = $1, "updated_at" = $2 WHERE "reimbursements"."id" = $3[0m  [["amount", 600.0], ["updated_at", "2023-04-10 00:35:12.486736"], ["id", 2]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 204 No Content in 16ms (ActiveRecord: 6.9ms | Allocations: 4242)
+
+
+Started PATCH "/reimbursements/2/?id=2" for 127.0.0.1 at 2023-04-09 19:35:24 -0500
+Processing by ReimbursementsController#update as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1, "id"=>"2", "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.1ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mReimbursement Update (1.8ms)[0m  [1m[33mUPDATE "reimbursements" SET "amount" = $1, "updated_at" = $2 WHERE "reimbursements"."id" = $3[0m  [["amount", 500.0], ["updated_at", "2023-04-10 00:35:24.739763"], ["id", 2]]
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:43:in `update'
+Completed 204 No Content in 17ms (ActiveRecord: 7.7ms | Allocations: 4020)
+
+
+Started DELETE "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:37:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started DELETE "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:37:44 -0500
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 28ms (Views: 0.2ms | ActiveRecord: 10.1ms | Allocations: 8463)
+
+
+Started DELETE "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:38:06 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/reimbursements"):
+  
+Started DELETE "/reimbursements/1/?user_id=1" for 127.0.0.1 at 2023-04-09 19:38:13 -0500
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.3ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:20:in `destroy'
+  [1m[36mReimbursement Destroy (2.1ms)[0m  [1m[31mDELETE FROM "reimbursements" WHERE "reimbursements"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:22:in `destroy'
+Completed 204 No Content in 50ms (ActiveRecord: 10.1ms | Allocations: 9939)
+
+
+Started DELETE "/reimbursements/1/?user_id=1" for 127.0.0.1 at 2023-04-09 19:38:30 -0500
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (2.0ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:20:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 3.2ms | Allocations: 1321)
+
+
+Started DELETE "/reimbursements/2/?user_id=1" for 127.0.0.1 at 2023-04-09 19:39:04 -0500
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.8ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:20:in `destroy'
+  [1m[36mReimbursement Destroy (2.5ms)[0m  [1m[31mDELETE FROM "reimbursements" WHERE "reimbursements"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/reimbursements_controller.rb:22:in `destroy'
+Completed 204 No Content in 14ms (ActiveRecord: 6.3ms | Allocations: 1716)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:39:40 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant dog", "status"=>"pending", "amount"=>800, "user_id"=>1, "reimbursement"=>{"description"=>"Giant dog", "status"=>"pending", "amount"=>800, "user_id"=>1}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mReimbursement Create (2.9ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant dog"], ["status", "pending"], ["amount", 800.0], ["user_id", 1], ["created_at", "2023-04-10 00:39:40.845640"], ["updated_at", "2023-04-10 00:39:40.845640"]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+Completed 201 Created in 33ms (Views: 0.4ms | ActiveRecord: 7.6ms | Allocations: 6967)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:39:48 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant cat", "status"=>"pending", "amount"=>700, "user_id"=>2, "reimbursement"=>{"description"=>"Giant cat", "status"=>"pending", "amount"=>700, "user_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 7ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 754)
+
+
+Started POST "/reimbursements/1" for 127.0.0.1 at 2023-04-09 19:40:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/reimbursements/1"):
+  
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:40:10 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>2, "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>2}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 753)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:40:15 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 264ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1116)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:40:25 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>2, "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>2}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 754)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:40:32 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1, "reimbursement"=>{"description"=>"Giant duck", "status"=>"pending", "amount"=>500, "user_id"=>1}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mReimbursement Create (1.1ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant duck"], ["status", "pending"], ["amount", 500.0], ["user_id", 1], ["created_at", "2023-04-10 00:40:32.280547"], ["updated_at", "2023-04-10 00:40:32.280547"]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+Completed 201 Created in 13ms (Views: 0.2ms | ActiveRecord: 5.1ms | Allocations: 3377)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:41:19 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant cat", "status"=>"approved", "amount"=>700, "user_id"=>1, "reimbursement"=>{"description"=>"Giant cat", "status"=>"approved", "amount"=>700, "user_id"=>1}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mReimbursement Create (1.1ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant cat"], ["status", "approved"], ["amount", 700.0], ["user_id", 1], ["created_at", "2023-04-10 00:41:19.142818"], ["updated_at", "2023-04-10 00:41:19.142818"]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 5.1ms | Allocations: 3377)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2023-04-09 19:45:07 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 3.7ms | Allocations: 151)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x0000000000d6d8>):
+  
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:46:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 309ms (Views: 2.1ms | ActiveRecord: 11.3ms | Allocations: 11234)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2023-04-09 19:46:33 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started GET "/users/create" for 127.0.0.1 at 2023-04-09 19:47:02 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 159)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x000000000093a8>):
+  
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:48:27 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x00000000009470>):
+  
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/user/" for 127.0.0.1 at 2023-04-09 19:48:32 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/user"):
+  
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:48:36 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 99)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<UsersController:0x00000000009560>):
+  
+app/controllers/users_controller.rb:3:in `create'
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:49:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 18ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 6236)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:49:17 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 301ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3255)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:49:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 770)
+
+
+Started POST "/users/1" for 127.0.0.1 at 2023-04-09 19:49:26 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:49:31 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 766)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:49:34 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>1, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>1}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 755)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2023-04-09 19:49:41 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 757)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:49:50 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 755)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:51:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 18ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 6235)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:51:56 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1, "reimbursement"=>{"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 4.4ms | Allocations: 802)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:52:12 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 274ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3249)
+
+
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:52:18 -0500
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1, "reimbursement"=>{"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.7ms | Allocations: 755)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/concerns/authenticatable.rb:18:in `authenticate_request!'
+Started POST "/reimbursements/" for 127.0.0.1 at 2023-04-09 19:52:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#create as */*
+  Parameters: {"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1, "reimbursement"=>{"description"=>"Giant fish", "status"=>"rejected", "amount"=>300, "user_id"=>1}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mReimbursement Create (2.6ms)[0m  [1m[32mINSERT INTO "reimbursements" ("description", "status", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Giant fish"], ["status", "rejected"], ["amount", 300.0], ["user_id", 1], ["created_at", "2023-04-10 00:52:29.364349"], ["updated_at", "2023-04-10 00:52:29.364349"]]
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reimbursements_controller.rb:56:in `create'
+Completed 201 Created in 96ms (Views: 1.0ms | ActiveRecord: 21.4ms | Allocations: 17883)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:52:36 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 845)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:54:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 18ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 6236)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-09 19:55:05 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]", "session"=>{"email"=>"da_boss@localhost.com", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "da_boss@localhost.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Completed 201 Created in 275ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 3258)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:55:37 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 770)
+
+
+Started PUT "/users/" for 127.0.0.1 at 2023-04-09 19:55:54 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/users"):
+  
+Started GET "/users/" for 127.0.0.1 at 2023-04-09 19:55:58 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/create" for 127.0.0.1 at 2023-04-09 19:56:01 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 757)
+
+
+Started POST "/users/" for 127.0.0.1 at 2023-04-09 19:56:06 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 6ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 766)
+
+
+Started POST "/users/?user_id=1" for 127.0.0.1 at 2023-04-09 19:56:36 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2, "user_id"=>"1", "user"=>{"name"=>"Billy Hilly", "email"=>"bobby@hillbilly.com", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Billy Hilly"], ["email", "bobby@hillbilly.com"], ["password_digest", "[FILTERED]"], ["role_id", 2], ["created_at", "2023-04-10 00:56:36.585245"], ["updated_at", "2023-04-10 00:56:36.585245"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 201 Created in 47ms (Views: 0.3ms | ActiveRecord: 13.8ms | Allocations: 8807)
+
+
+Started POST "/users/?user_id=1" for 127.0.0.1 at 2023-04-09 19:57:41 -0500
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Bobby Hilly", "email"=>"bibby@hillybolly.com", "password"=>"[FILTERED]", "role_id"=>2, "user_id"=>"1", "user"=>{"name"=>"Bobby Hilly", "email"=>"bibby@hillybolly.com", "role_id"=>2}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mRole Load (2.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bobby Hilly"], ["email", "bibby@hillybolly.com"], ["password_digest", "[FILTERED]"], ["role_id", 2], ["created_at", "2023-04-10 00:57:41.875567"], ["updated_at", "2023-04-10 00:57:41.875567"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 201 Created in 273ms (Views: 0.3ms | ActiveRecord: 8.5ms | Allocations: 3645)
+
+
+Started GET "/reimbursements/?user_id=1" for 127.0.0.1 at 2023-04-09 19:59:28 -0500
+Processing by ReimbursementsController#index as */*
+  Parameters: {"user_id"=>"1", "reimbursement"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.2ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/reimbursements_controller.rb:8:in `index'
+  [1m[36mReimbursement Load (1.3ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements"[0m
+  ↳ app/controllers/reimbursements_controller.rb:10:in `index'
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 16.1ms | Allocations: 8826)
+
+
+Started DELETE "/reimbursements/3/?user_id=1" for 127.0.0.1 at 2023-04-09 20:01:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+lib/json_web_token.rb:14:in `rescue in decode'
+lib/json_web_token.rb:9:in `decode'
+app/controllers/concerns/authenticatable.rb:15:in `authenticate_request!'
+Started DELETE "/reimbursements/3/?user_id=1" for 127.0.0.1 at 2023-04-09 20:01:42 -0500
+Processing by ReimbursementsController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mReimbursement Load (1.0ms)[0m  [1m[34mSELECT "reimbursements".* FROM "reimbursements" WHERE "reimbursements"."id" = $1 ORDER BY "reimbursements"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reimbursements_controller.rb:20:in `destroy'
+  [1m[36mReimbursement Destroy (2.4ms)[0m  [1m[31mDELETE FROM "reimbursements" WHERE "reimbursements"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/reimbursements_controller.rb:22:in `destroy'
+Completed 204 No Content in 57ms (ActiveRecord: 17.8ms | Allocations: 15926)
+
+
+Started DELETE "/user/3/?user_id=1" for 127.0.0.1 at 2023-04-09 20:02:28 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/user/3"):
+  
+Started DELETE "/users/3/?user_id=1" for 127.0.0.1 at 2023-04-09 20:02:34 -0500
+Processing by UsersController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `destroy'
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:30:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 4.7ms | Allocations: 1903)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-04-09 20:02:55 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 403 Forbidden in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 872)
+
+
+Started GET "/users/?user_id=1" for 127.0.0.1 at 2023-04-09 20:03:21 -0500
+Processing by UsersController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/authenticatable.rb:16:in `authenticate_request!'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 2.2ms | ActiveRecord: 5.3ms | Allocations: 2728)
+
+
