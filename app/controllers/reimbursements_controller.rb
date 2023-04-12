@@ -2,20 +2,26 @@ class ReimbursementsController < ApplicationController
   include Authenticatable
   #this works at the moment
   def index
-    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
-    if current_user&.manager?
-      @reimbursement = Reimbursement.all
-      puts @reimbursement.inspect
-      {status: [201, "Displayed reimbursement"]}
-      render json: {reimbursement: @reimbursement}
-    else
-      @reimbursement =Reimbursement.find_by(user_id: current_user.id)
-      puts @reimbursement.inspect
-      {status: [201, "Displayed reimbursement"]}
+        return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
+        if current_user&.manager?
+          @reimbursement = Reimbursement.all
+          puts @reimbursement.inspect
+          {status: [201, "Displayed reimbursement"]}
+          render json: {reimbursement: @reimbursement}
+        else
+          {status: [401, "Unauthorized"], body: ["No permissions"]}
       render json: {reimbursement: @reimbursement}
     end
   end
+
+  def show
+    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
+    @reimbursement =Reimbursement.find_by(user_id: current_user.id)
+    puts @reimbursement.inspect
+    {status: [201, "Displayed reimbursement"]}
+  end
   def destroy
+    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
     if current_user&.manager?
       @reimbursement = Reimbursement.where(id: params[:id]).first
       if @reimbursement
@@ -38,6 +44,7 @@ class ReimbursementsController < ApplicationController
 
 
   def update
+    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
     @reimbursement = Reimbursement.where(id: params[:id]).first
     puts "Updating request #{@reimbursement}"
     @reimbursement.update(JSON.parse(request.body.read))
@@ -50,6 +57,7 @@ class ReimbursementsController < ApplicationController
   end
 
   def create # POST /users/:user_id/lists
+    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
     data = JSON.parse(request.body.read)
     data[:user_id] = current_user.id
     @reimbursement = Reimbursement.new(data)
