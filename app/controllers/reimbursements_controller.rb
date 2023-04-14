@@ -15,10 +15,10 @@ class ReimbursementsController < ApplicationController
   end
 
   def show
-    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
-    @reimbursement =Reimbursement.find_by(user_id: current_user.id)
+    @reimbursement =Reimbursement.where(user_id: params[:id])
     puts @reimbursement.inspect
     {status: [201, "Displayed reimbursement"]}
+    render json: {reimbursement: @reimbursement}
   end
   def destroy
     return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
@@ -44,7 +44,6 @@ class ReimbursementsController < ApplicationController
 
 
   def update
-    return render json: {error: "No authorized principal"}, status: :unauthorized unless current_user
     @reimbursement = Reimbursement.where(id: params[:id]).first
     puts "Updating request #{@reimbursement}"
     @reimbursement.update(JSON.parse(request.body.read))

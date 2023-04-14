@@ -1,0 +1,55 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/admin/Documents/Revature/Repos/MM-project1-backend/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          0
+        ]
+      },
+      "/Users/admin/Documents/Revature/Repos/MM-project1-backend/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/admin/Documents/Revature/Repos/MM-project1-backend/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      }
+    },
+    "timestamp": 1681461465
+  }
+}
