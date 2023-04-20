@@ -13,23 +13,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: checkout repository
+      - uses: actions/checkout@v2
+      - name: checkout repository
       
      
-    - name: Connect to EC2 instance
-       run:|
-          ssh -o StrictHostKeyChecking=no -i ${{ EC2_DEPLOYMENT_KEY }} ec2-user@${{ secrets.EC2_PUBLIC_IP }} "cd /project2/MM-project1-backend/ && git pull"
+      - name: Connect to EC2 instance
+          run:|
+            ssh -o StrictHostKeyChecking=no -i ${{ EC2_DEPLOYMENT_KEY }} ec2-user@${{ secrets.EC2_PUBLIC_IP }} "cd /project2/MM-project1-backend/ && git pull"
   
-    - name: Install Ruby dependencies
-       run:|
-          cd /project2/MM-project1-backend/
-          bundle install --deployment --without development test
+      - name: Install Ruby dependencies
+         run:|
+            cd /project2/MM-project1-backend/
+            bundle install --deployment --without development test
         
-    - name: Build Docker Image
-      run: |
-        cd /project2/MM-project1-backend/
-        sudo docker build ./
+      - name: Build Docker Image
+         run:|
+            cd /project2/MM-project1-backend/
+            sudo docker build ./
   
   
   
