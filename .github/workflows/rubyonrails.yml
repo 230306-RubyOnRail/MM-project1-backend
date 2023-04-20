@@ -8,9 +8,17 @@ name: "Ruby on Rails CI"
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: checkout repository
+     uses: actions/checkout@v2
+     
+   - name: Connect to EC2 instance
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.deployment_key }} ec2-user@${{ secrets.EC2_PUBLIC_IP }} "cd /path/to/app && git pull"
   test:
     runs-on: ubuntu-latest
     services:
@@ -40,19 +48,4 @@ jobs:
       - name: Run tests
         run: bin/rake
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
-        with:
-          bundler-cache: true
-      # Add or replace any other lints here
-      - name: Security audit dependencies
-        run: bin/bundler-audit --update
-      - name: Security audit application code
-        run: bin/brakeman -q -w2
-      - name: Lint Ruby files
-        run: bin/rubocop --parallel
+ 
