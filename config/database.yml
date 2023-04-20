@@ -11,11 +11,12 @@ default: &default
 
 development:
   <<: *default
+  engine: postgres
   adapter: postgresql
   database: postgres
-  username: ruby_app
-  password: ruby_secret
-  host: localhost
+  username: rubypostgres
+  password: rubysecret123
+  host: mm-project2-database.c1g4u7ocjofl.us-east-1.rds.amazonaws.com
   port: 5432
   timeout: 5000
   pool: 10
