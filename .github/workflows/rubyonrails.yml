@@ -12,9 +12,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+    - uses: actions/checkout@v2
     - name: checkout repository
-      uses: actions/checkout@v2
+      
      
     - name: Connect to EC2 instance
        run:|
