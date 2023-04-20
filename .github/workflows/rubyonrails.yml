@@ -24,7 +24,7 @@ jobs:
           POSTGRES_PASSWORD: rubysecret123
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      DATABASE_URL: "mm-project2-database.c1g4u7ocjofl.us-east-1.rds.amazonaws.com"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
