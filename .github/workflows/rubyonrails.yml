@@ -18,18 +18,18 @@ jobs:
       
      
       - name: Connect to EC2 instance
-          run:|
-            ssh -o StrictHostKeyChecking=no -i ${{ EC2_DEPLOYMENT_KEY }} ec2-user@${{ secrets.EC2_PUBLIC_IP }} "cd /project2/MM-project1-backend/ && git pull"
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ EC2_DEPLOYMENT_KEY }} ec2-user@${{ secrets.EC2_PUBLIC_IP }} "cd /project2/MM-project1-backend/ && git pull"
   
       - name: Install Ruby dependencies
-         run:|
-            cd /project2/MM-project1-backend/
-            bundle install --deployment --without development test
+        run: |
+          cd /project2/MM-project1-backend/
+          bundle install --deployment --without development test
         
       - name: Build Docker Image
-         run:|
-            cd /project2/MM-project1-backend/
-            sudo docker build ./
+        run: |
+          cd /project2/MM-project1-backend/
+          sudo docker build ./
   
   
   
