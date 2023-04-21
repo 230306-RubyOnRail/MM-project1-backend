@@ -24,15 +24,7 @@ jobs:
         with:
           ruby-version: 3.2.2
           bundler-cache: true
-          
-      - name: Install Ruby Dependencies
-        run: |
-          sudo apt install -yqq libpq-dev
-          gem install bundler
-      - name: Install Gems
-        run: |
-          bundle install
-           
+         
       - name: Set Up Database
         run: |
           bundle install --jobs 4 --retry 3
