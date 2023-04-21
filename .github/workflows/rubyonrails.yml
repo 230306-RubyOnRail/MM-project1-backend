@@ -24,7 +24,7 @@ jobs:
         chmod 400 password.pem
         ssh -i password.pem -t -t -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
         cd project2/MM-project1-backend/
-        sudo docker -u mclich -p ${{ secrets.DOCKER_TOKEN}}
+        sudo docker login -u mclich -p ${{ secrets.DOCKER_TOKEN}}
         sudo docker stop project2 && sudo docker container rm project2
         sudo docker system prune -a -f
         sudo docker build -t mclich/project2 ./ 
